@@ -1,4 +1,11 @@
 <h1>My turn</h1>
 
-<app-my-new-component/>
-<app-second-com/>
+<ul *ngIf="isVisible">
+  <li *ngFor="let item of friendslist">
+    {{item.name}} is {{item.age}} years old
+  </li>
+</ul>
+
+<button (click)="hideList()">
+  Click to hide list
+</button>
